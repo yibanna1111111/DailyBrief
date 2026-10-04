@@ -1,0 +1,120 @@
+﻿2026-10-04T10:39:15.9610089Z ##[group]Run npm run daily
+2026-10-04T10:39:15.9610414Z [36;1mnpm run daily[0m
+2026-10-04T10:39:15.9674889Z shell: /usr/bin/bash -e {0}
+2026-10-04T10:39:15.9675216Z env:
+2026-10-04T10:39:15.9675464Z   LLM_BACKEND: deepseek
+2026-10-04T10:39:15.9675746Z   LLM_MODEL: 
+2026-10-04T10:39:15.9676010Z   ANTHROPIC_API_KEY: 
+2026-10-04T10:39:15.9676287Z   OPENAI_API_KEY: 
+2026-10-04T10:39:15.9676552Z   DEEPSEEK_API_KEY: 
+2026-10-04T10:39:15.9676821Z   MINIMAX_API_KEY: 
+2026-10-04T10:39:15.9677080Z   ZHIPU_API_KEY: 
+2026-10-04T10:39:15.9677577Z   ANTHROPIC_BASE_URL: 
+2026-10-04T10:39:15.9677852Z   OPENAI_BASE_URL: 
+2026-10-04T10:39:15.9678116Z   DEEPSEEK_BASE_URL: 
+2026-10-04T10:39:15.9678386Z   MINIMAX_BASE_URL: 
+2026-10-04T10:39:15.9678648Z   ZHIPU_BASE_URL: 
+2026-10-04T10:39:15.9679209Z   LLM_API_KEY: ***
+2026-10-04T10:39:15.9679474Z   LLM_BASE_URL: 
+2026-10-04T10:39:15.9679731Z   REPORT_LOCALE: zh
+2026-10-04T10:39:15.9679994Z   REPORT_TZ: 
+2026-10-04T10:39:15.9680254Z   DISABLE_SOURCE_IDS: linuxdo
+2026-10-04T10:39:15.9680603Z   WEB_MODE: true
+2026-10-04T10:39:15.9680856Z ##[endgroup]
+2026-10-04T10:39:16.0885186Z 
+2026-10-04T10:39:16.0886073Z > daily-brief@0.1.0 daily
+2026-10-04T10:39:16.0886899Z > tsx scripts/daily.ts
+2026-10-04T10:39:16.0887323Z 
+2026-10-04T10:39:16.9549193Z [daily] 2026-10-04 — fetching sources…
+2026-10-04T10:39:16.9549678Z 
+2026-10-04T10:39:18.4630047Z   github-trending      19
+2026-10-04T10:39:18.8462875Z   v2ex-hot             25
+2026-10-04T10:39:19.0617411Z   linuxdo              FAILED — Unable to parse XML.
+2026-10-04T10:39:19.2243430Z   openai-news          30
+2026-10-04T10:39:19.4224073Z   deepmind-blog        30
+2026-10-04T10:39:19.5422315Z   huggingface-blog     30
+2026-10-04T10:39:19.6337250Z   huggingface-papers   30
+2026-10-04T10:39:19.8560810Z   tldr-ai              20
+2026-10-04T10:39:20.2351775Z   smol-ai-news         30
+2026-10-04T10:39:20.3372883Z   latent-space         20
+2026-10-04T10:39:20.3722778Z   mit-tech-review-ai   10
+2026-10-04T10:39:20.4806263Z   attentionvc-ai       9
+2026-10-04T10:39:20.7714704Z   bloomberg-markets    19
+2026-10-04T10:39:21.0362703Z   wsj-markets          20
+2026-10-04T10:39:21.5626659Z   ft-companies         25
+2026-10-04T10:39:21.5944311Z   bbc-business         30
+2026-10-04T10:39:21.7517983Z   economist-finance    30
+2026-10-04T10:39:21.7587880Z   bbc-world            21
+2026-10-04T10:39:21.9251193Z   guardian-world       30
+2026-10-04T10:39:22.0585028Z   nyt-world            30
+2026-10-04T10:39:22.1472316Z   npr-world            10
+2026-10-04T10:39:22.4242751Z   dw-chinese           30
+2026-10-04T10:39:22.4852862Z   aljazeera            25
+2026-10-04T10:39:22.5214094Z   the-diplomat         30
+2026-10-04T10:39:22.5214472Z 
+2026-10-04T10:39:22.5214706Z [daily] total articles: 553
+2026-10-04T10:39:22.5218416Z [daily] enriching 19 GitHub Trending repos with zh summaries…
+2026-10-04T10:39:23.0175013Z [enrich] GH summaries failed: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: 85ae49ba-b827-47eb-a9b9-136fa2be4998)
+2026-10-04T10:39:23.0176663Z [daily] enrichment done in 0.5s, matched 0/19
+2026-10-04T10:39:23.0177735Z [daily] enriching 20 trending papers with zh summaries…
+2026-10-04T10:39:23.3389720Z [enrich] papers summaries failed: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: c6dda490-c21f-45cd-ac64-bf84e92157be)
+2026-10-04T10:39:23.3392124Z [daily] enrichment done in 0.3s, matched 0/20
+2026-10-04T10:39:23.3397360Z [daily] enriching 12/12 finance:news items with zh summaries…
+2026-10-04T10:39:23.6579340Z [enrich] finance summaries failed: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: a9ca8fe8-c6eb-49c6-930f-ee611bb41521)
+2026-10-04T10:39:23.6581710Z [daily] enrichment done in 0.3s, matched 0/12
+2026-10-04T10:39:23.6593195Z [daily] enriching 15/15 politics:world items with zh summaries…
+2026-10-04T10:39:23.9756175Z [enrich] finance summaries failed: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: f706a11d-c1b9-45b8-a764-afdef74a4b6d)
+2026-10-04T10:39:23.9757977Z [daily] enrichment done in 0.3s, matched 0/15
+2026-10-04T10:39:23.9769253Z [daily] enriching 15/15 tech:ai-news items with zh summaries…
+2026-10-04T10:39:24.2910862Z [enrich] finance summaries failed: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: 8dcfecb6-67ed-4287-beec-321e9d4046c6)
+2026-10-04T10:39:24.2912454Z [daily] enrichment done in 0.3s, matched 0/15
+2026-10-04T10:39:24.2913330Z [daily] enriching 9 X posts with zh summaries…
+2026-10-04T10:39:24.6152996Z [enrich] X-viral summaries failed: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: 7982c31c-0b4a-4374-a415-ca4ecaee55dc)
+2026-10-04T10:39:24.6155022Z [daily] enrichment done in 0.3s, matched 0/9
+2026-10-04T10:39:24.6156291Z [daily] analyzing watchlist + crypto context (Yahoo / alt.me / CoinGecko)…
+2026-10-04T10:39:24.7546675Z [daily] indicators ready in 0.1s — 21 tickers, F&G 65, BTC dom 59.1%
+2026-10-04T10:39:24.7548734Z [daily] generating trading commentary with deepseek-deepseek-v4-flash…
+2026-10-04T10:39:25.0838685Z [trading-commentary] attempt 1/3 failed, retrying: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: 12ca790a-092c-4449-bfb0-561d6abfcc1d)
+2026-10-04T10:39:25.3886176Z [trading-commentary] attempt 2/3 failed, retrying: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: 4377092e-8717-4c5c-8cb4-ef964e8da125)
+2026-10-04T10:39:25.7122016Z [trading-commentary] all 3 attempts failed: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: 3a8dd41b-cc71-4375-b874-232f841934ca)
+2026-10-04T10:39:25.7123355Z [daily] trading commentary ready in 1.0s
+2026-10-04T10:39:25.7124302Z [daily] generating digest with deepseek-deepseek-v4-flash…
+2026-10-04T10:39:26.1174127Z [pipeline] first claude CLI call failed, retrying: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: a9cd64aa-08ae-4849-a0de-eeab9f46b950)
+2026-10-04T10:39:26.5202387Z [daily] FAILED: AuthenticationError: 401 Authentication Fails, Your api key: ****2d79 is invalid (request_id: ec36b211-8380-4fa4-b3bc-666ee86cd9ca)
+2026-10-04T10:39:26.5204651Z     at Function.generate (/home/runner/work/DailyBrief/DailyBrief/node_modules/openai/src/core/error.ts:77:14)
+2026-10-04T10:39:26.5206722Z     at OpenAI.makeStatusError (/home/runner/work/DailyBrief/DailyBrief/node_modules/openai/src/client.ts:591:28)
+2026-10-04T10:39:26.5208637Z     at OpenAI.makeRequest (/home/runner/work/DailyBrief/DailyBrief/node_modules/openai/src/client.ts:872:24)
+2026-10-04T10:39:26.5210391Z     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-10-04T10:39:26.5212264Z     at async runOpenAICompat (/home/runner/work/DailyBrief/DailyBrief/lib/ai/backends/openai-compat.ts:86:18)
+2026-10-04T10:39:26.5214301Z     at async callOnce (/home/runner/work/DailyBrief/DailyBrief/lib/ai/pipeline.ts:153:20)
+2026-10-04T10:39:26.5216241Z     at async generateDailyReport (/home/runner/work/DailyBrief/DailyBrief/lib/ai/pipeline.ts:232:14)
+2026-10-04T10:39:26.5217779Z     at async main (/home/runner/work/DailyBrief/DailyBrief/scripts/daily.ts:274:22) {
+2026-10-04T10:39:26.5219138Z   status: 401,
+2026-10-04T10:39:26.5219724Z   headers: Headers {
+2026-10-04T10:39:26.5220412Z     'content-type': 'application/json',
+2026-10-04T10:39:26.5221268Z     'content-length': '204',
+2026-10-04T10:39:26.5222211Z     connection: 'keep-alive',
+2026-10-04T10:39:26.5222998Z     date: 'Sun, 04 Oct 2026 10:39:26 GMT',
+2026-10-04T10:39:26.5223794Z     server: 'elb',
+2026-10-04T10:39:26.5224854Z     vary: 'origin, access-control-request-method, access-control-request-headers',
+2026-10-04T10:39:26.5226036Z     'access-control-allow-credentials': 'true',
+2026-10-04T10:39:26.5227029Z     'x-ds-trace-id': '340e339dcfd13a5f449636cc9aa6aca5',
+2026-10-04T10:39:26.5228208Z     'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+2026-10-04T10:39:26.5229360Z     'x-content-type-options': 'nosniff',
+2026-10-04T10:39:26.5230246Z     'x-cache': 'Error from cloudfront',
+2026-10-04T10:39:26.5232381Z     via: '1.1 2e9efc6c92f43e49016092f40e32ddc4.cloudfront.net (CloudFront)',
+2026-10-04T10:39:26.5251268Z     'x-amz-cf-pop': 'IAD55-P2',
+2026-10-04T10:39:26.5253956Z     'x-amz-cf-id': '7ybPUy70mP43M2pvw6y0ijt8Joskd81HikU2ck1e-QRh5dWXhXDKKg=='
+2026-10-04T10:39:26.5254909Z   },
+2026-10-04T10:39:26.5255443Z   requestID: null,
+2026-10-04T10:39:26.5256027Z   error: {
+2026-10-04T10:39:26.5257152Z     message: 'Authentication Fails, Your api key: ****2d79 is invalid (request_id: ec36b211-8380-4fa4-b3bc-666ee86cd9ca)',
+2026-10-04T10:39:26.5258648Z     type: 'authentication_error',
+2026-10-04T10:39:26.5259272Z     param: null,
+2026-10-04T10:39:26.5259856Z     code: 'invalid_request_error'
+2026-10-04T10:39:26.5260430Z   },
+2026-10-04T10:39:26.5261555Z   code: 'invalid_request_error',
+2026-10-04T10:39:26.5262463Z   param: null,
+2026-10-04T10:39:26.5263142Z   type: 'authentication_error'
+2026-10-04T10:39:26.5263778Z }
+2026-10-04T10:39:26.5566332Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,29 @@
+﻿2026-10-04T10:38:59.3589260Z Current runner version: '2.337.0'
+2026-10-04T10:38:59.3625005Z ##[group]Runner Image Provisioner
+2026-10-04T10:38:59.3626992Z Hosted Compute Agent
+2026-10-04T10:38:59.3627990Z Version: 20260901.588
+2026-10-04T10:38:59.3629158Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-04T10:38:59.3630374Z Build Date: 2026-09-01T19:56:44Z
+2026-10-04T10:38:59.3631629Z Worker ID: {90b388de-56ca-448d-bf5b-66f2766b95dd}
+2026-10-04T10:38:59.3632943Z Azure Region: eastus
+2026-10-04T10:38:59.3633841Z ##[endgroup]
+2026-10-04T10:38:59.3636722Z ##[group]Operating System
+2026-10-04T10:38:59.3637799Z Ubuntu
+2026-10-04T10:38:59.3638630Z 24.04.5
+2026-10-04T10:38:59.3639580Z LTS
+2026-10-04T10:38:59.3640448Z ##[endgroup]
+2026-10-04T10:38:59.3641351Z ##[group]Runner Image
+2026-10-04T10:38:59.3642380Z Image: ubuntu-24.04
+2026-10-04T10:38:59.3643372Z Version: 20260927.320.1
+2026-10-04T10:38:59.3645357Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-04T10:38:59.3648726Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+2026-10-04T10:38:59.3650387Z ##[endgroup]
+2026-10-04T10:38:59.3652308Z ##[group]GITHUB_TOKEN Permissions
+2026-10-04T10:38:59.3655219Z Contents: write
+2026-10-04T10:38:59.3656555Z Metadata: read
+2026-10-04T10:38:59.3657618Z ##[endgroup]
+2026-10-04T10:38:59.3661250Z Secret source: Actions
+2026-10-04T10:38:59.3662856Z Cache mode: write
+2026-10-04T10:38:59.3664369Z Prepare workflow directory
+2026-10-04T10:38:59.4143353Z Prepare all required actions
+2026-10-04T10:38:59.4298174Z Complete job name: Time gate

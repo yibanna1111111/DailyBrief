@@ -1,0 +1,17 @@
+﻿2026-10-04T10:39:09.4134661Z ##[group]Run npm ci
+2026-10-04T10:39:09.4135025Z [36;1mnpm ci[0m
+2026-10-04T10:39:09.4396321Z shell: /usr/bin/bash -e {0}
+2026-10-04T10:39:09.4396774Z ##[endgroup]
+2026-10-04T10:39:10.3707300Z npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-10-04T10:39:11.9567435Z 
+2026-10-04T10:39:11.9569062Z added 44 packages, and audited 45 packages in 2s
+2026-10-04T10:39:11.9569667Z 
+2026-10-04T10:39:11.9569974Z 19 packages are looking for funding
+2026-10-04T10:39:11.9570477Z   run `npm fund` for details
+2026-10-04T10:39:11.9803969Z 
+2026-10-04T10:39:11.9804804Z 2 vulnerabilities (1 low, 1 high)
+2026-10-04T10:39:11.9805245Z 
+2026-10-04T10:39:11.9805552Z To address all issues, run:
+2026-10-04T10:39:11.9806036Z   npm audit fix
+2026-10-04T10:39:11.9806270Z 
+2026-10-04T10:39:11.9806498Z Run `npm audit` for details.

@@ -1,0 +1,117 @@
+﻿2026-10-04T10:38:59.5105958Z ##[group]Run set -euo pipefail
+2026-10-04T10:38:59.5106940Z [36;1mset -euo pipefail[0m
+2026-10-04T10:38:59.5107651Z [36;1m[0m
+2026-10-04T10:38:59.5108327Z [36;1m# Manual triggers always run — user clicked Run workflow.[0m
+2026-10-04T10:38:59.5109357Z [36;1mif [ "$EVENT_NAME" = "workflow_dispatch" ]; then[0m
+2026-10-04T10:38:59.5110234Z [36;1m  echo "Manual trigger — bypassing time gate"[0m
+2026-10-04T10:38:59.5111032Z [36;1m  echo "should-run=true" >> "$GITHUB_OUTPUT"[0m
+2026-10-04T10:38:59.5111764Z [36;1m  exit 0[0m
+2026-10-04T10:38:59.5112314Z [36;1mfi[0m
+2026-10-04T10:38:59.5112885Z [36;1m[0m
+2026-10-04T10:38:59.5113477Z [36;1mTZ_VAL="${REPORT_TZ:-UTC}"[0m
+2026-10-04T10:38:59.5114138Z [36;1mHOURS_VAL="${REPORT_HOUR:-8}"[0m
+2026-10-04T10:38:59.5114835Z [36;1mDAYS_VAL="${REPORT_DAYS:-*}"[0m
+2026-10-04T10:38:59.5115732Z [36;1m[0m
+2026-10-04T10:38:59.5116362Z [36;1mNOW_HOUR=$(TZ="$TZ_VAL" date +%-H)[0m
+2026-10-04T10:38:59.5117123Z [36;1mNOW_DOW=$(TZ="$TZ_VAL" date +%w)[0m
+2026-10-04T10:38:59.5118036Z [36;1mNOW_PRINT=$(TZ="$TZ_VAL" date '+%Y-%m-%d %H:%M %Z')[0m
+2026-10-04T10:38:59.5118804Z [36;1m[0m
+2026-10-04T10:38:59.5119506Z [36;1mecho "Now in $TZ_VAL: $NOW_PRINT (hour=$NOW_HOUR, dow=$NOW_DOW)"[0m
+2026-10-04T10:38:59.5120565Z [36;1mecho "Configured REPORT_HOUR='$HOURS_VAL', REPORT_DAYS='$DAYS_VAL'"[0m
+2026-10-04T10:38:59.5121413Z [36;1m[0m
+2026-10-04T10:38:59.5122048Z [36;1m# Hour match: comma-separated list of integers (0-23).[0m
+2026-10-04T10:38:59.5122857Z [36;1mhour_match=false[0m
+2026-10-04T10:38:59.5123529Z [36;1mIFS=',' read -ra HLIST <<< "$HOURS_VAL"[0m
+2026-10-04T10:38:59.5124214Z [36;1mfor h in "${HLIST[@]}"; do[0m
+2026-10-04T10:38:59.5124905Z [36;1m  h_trim="${h// /}"[0m
+2026-10-04T10:38:59.5125952Z [36;1m  if [ "$NOW_HOUR" = "$h_trim" ]; then[0m
+2026-10-04T10:38:59.5126781Z [36;1m    hour_match=true[0m
+2026-10-04T10:38:59.5127458Z [36;1m    break[0m
+2026-10-04T10:38:59.5127976Z [36;1m  fi[0m
+2026-10-04T10:38:59.5128559Z [36;1mdone[0m
+2026-10-04T10:38:59.5129083Z [36;1m[0m
+2026-10-04T10:38:59.5129814Z [36;1m# Day-of-week match: '*', single digits, ranges "a-b", or comma combos.[0m
+2026-10-04T10:38:59.5130698Z [36;1mday_match=false[0m
+2026-10-04T10:38:59.5131286Z [36;1mif [ "$DAYS_VAL" = "*" ]; then[0m
+2026-10-04T10:38:59.5131964Z [36;1m  day_match=true[0m
+2026-10-04T10:38:59.5132525Z [36;1melse[0m
+2026-10-04T10:38:59.5133416Z [36;1m  IFS=',' read -ra DLIST <<< "$DAYS_VAL"[0m
+2026-10-04T10:38:59.5134153Z [36;1m  for d in "${DLIST[@]}"; do[0m
+2026-10-04T10:38:59.5134781Z [36;1m    d_trim="${d// /}"[0m
+2026-10-04T10:38:59.5135702Z [36;1m    if [[ "$d_trim" == *-* ]]; then[0m
+2026-10-04T10:38:59.5136430Z [36;1m      start="${d_trim%-*}"[0m
+2026-10-04T10:38:59.5137037Z [36;1m      end="${d_trim#*-}"[0m
+2026-10-04T10:38:59.5137896Z [36;1m      if [ "$NOW_DOW" -ge "$start" ] && [ "$NOW_DOW" -le "$end" ]; then[0m
+2026-10-04T10:38:59.5138680Z [36;1m        day_match=true[0m
+2026-10-04T10:38:59.5139349Z [36;1m        break[0m
+2026-10-04T10:38:59.5139901Z [36;1m      fi[0m
+2026-10-04T10:38:59.5140402Z [36;1m    else[0m
+2026-10-04T10:38:59.5141064Z [36;1m      if [ "$NOW_DOW" = "$d_trim" ]; then[0m
+2026-10-04T10:38:59.5141741Z [36;1m        day_match=true[0m
+2026-10-04T10:38:59.5142360Z [36;1m        break[0m
+2026-10-04T10:38:59.5142920Z [36;1m      fi[0m
+2026-10-04T10:38:59.5143435Z [36;1m    fi[0m
+2026-10-04T10:38:59.5144019Z [36;1m  done[0m
+2026-10-04T10:38:59.5144560Z [36;1mfi[0m
+2026-10-04T10:38:59.5145085Z [36;1m[0m
+2026-10-04T10:38:59.5146249Z [36;1m# Catchup branch — covers GitHub Actions silently dropping scheduled[0m
+2026-10-04T10:38:59.5147304Z [36;1m# triggers (which happens to ~30% of cron runs, especially at the[0m
+2026-10-04T10:38:59.5148254Z [36;1m# exact target hour). Fires when:[0m
+2026-10-04T10:38:59.5148924Z [36;1m#   1. day matches AND[0m
+2026-10-04T10:38:59.5149553Z [36;1m#   2. exact hour didn't match AND[0m
+2026-10-04T10:38:59.5150362Z [36;1m#   3. we're past today's earliest REPORT_HOUR AND[0m
+2026-10-04T10:38:59.5151454Z [36;1m#   4. today's report doesn't yet exist on gh-pages[0m
+2026-10-04T10:38:59.5152410Z [36;1m# Once today's report is published, this branch self-suppresses on[0m
+2026-10-04T10:38:59.5153328Z [36;1m# subsequent gate runs — no double-builds per day.[0m
+2026-10-04T10:38:59.5154068Z [36;1mcatchup_match=false[0m
+2026-10-04T10:38:59.5154861Z [36;1mif [ "$day_match" = "true" ] && [ "$hour_match" = "false" ]; then[0m
+2026-10-04T10:38:59.5156005Z [36;1m  earliest_hour=99[0m
+2026-10-04T10:38:59.5156787Z [36;1m  for h in "${HLIST[@]}"; do[0m
+2026-10-04T10:38:59.5157429Z [36;1m    h_trim="${h// /}"[0m
+2026-10-04T10:38:59.5158085Z [36;1m    if [ "$h_trim" -lt "$earliest_hour" ]; then[0m
+2026-10-04T10:38:59.5158862Z [36;1m      earliest_hour=$h_trim[0m
+2026-10-04T10:38:59.5159507Z [36;1m    fi[0m
+2026-10-04T10:38:59.5160040Z [36;1m  done[0m
+2026-10-04T10:38:59.5160726Z [36;1m  # Tolerate 1h early: if BJ 07:XX is the only trigger before BJ[0m
+2026-10-04T10:38:59.5161664Z [36;1m  # 08:00 gets swallowed, we'd rather fire slightly early than[0m
+2026-10-04T10:38:59.5162653Z [36;1m  # not at all. earliest_hour=0 edge case: don't go negative.[0m
+2026-10-04T10:38:59.5163486Z [36;1m  catchup_threshold=$earliest_hour[0m
+2026-10-04T10:38:59.5164223Z [36;1m  if [ "$earliest_hour" -gt 0 ]; then[0m
+2026-10-04T10:38:59.5164976Z [36;1m    catchup_threshold=$((earliest_hour - 1))[0m
+2026-10-04T10:38:59.5165936Z [36;1m  fi[0m
+2026-10-04T10:38:59.5166614Z [36;1m  if [ "$NOW_HOUR" -ge "$catchup_threshold" ]; then[0m
+2026-10-04T10:38:59.5167425Z [36;1m    TODAY=$(TZ="$TZ_VAL" date +%Y-%m-%d)[0m
+2026-10-04T10:38:59.5168608Z [36;1m    CHECK_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${TODAY}/${TODAY}.html?ref=gh-pages"[0m
+2026-10-04T10:38:59.5169843Z [36;1m    HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \[0m
+2026-10-04T10:38:59.5170796Z [36;1m      -H "Authorization: ***" \[0m
+2026-10-04T10:38:59.5171595Z [36;1m      -H "Accept: application/vnd.github+json" \[0m
+2026-10-04T10:38:59.5172413Z [36;1m      -H "X-GitHub-Api-Version: 2022-11-28" \[0m
+2026-10-04T10:38:59.5173116Z [36;1m      "$CHECK_URL" || echo "000")[0m
+2026-10-04T10:38:59.5173887Z [36;1m    if [ "$HTTP_CODE" = "404" ]; then[0m
+2026-10-04T10:38:59.5174783Z [36;1m      echo "↻ Catchup: today's report ($TODAY) missing from gh-pages — recovering"[0m
+2026-10-04T10:38:59.5239939Z [36;1m      catchup_match=true[0m
+2026-10-04T10:38:59.5240537Z [36;1m    else[0m
+2026-10-04T10:38:59.5241253Z [36;1m      echo "Catchup check: today's report exists (HTTP $HTTP_CODE) — no action"[0m
+2026-10-04T10:38:59.5242035Z [36;1m    fi[0m
+2026-10-04T10:38:59.5242458Z [36;1m  fi[0m
+2026-10-04T10:38:59.5242869Z [36;1mfi[0m
+2026-10-04T10:38:59.5243299Z [36;1m[0m
+2026-10-04T10:38:59.5243862Z [36;1mif [ "$hour_match" = "true" ] && [ "$day_match" = "true" ]; then[0m
+2026-10-04T10:38:59.5244605Z [36;1m  echo "✓ Match — proceeding to build"[0m
+2026-10-04T10:38:59.5245284Z [36;1m  echo "should-run=true" >> "$GITHUB_OUTPUT"[0m
+2026-10-04T10:38:59.5246118Z [36;1melif [ "$catchup_match" = "true" ]; then[0m
+2026-10-04T10:38:59.5246769Z [36;1m  echo "✓ Catchup — proceeding to build"[0m
+2026-10-04T10:38:59.5247421Z [36;1m  echo "should-run=true" >> "$GITHUB_OUTPUT"[0m
+2026-10-04T10:38:59.5248004Z [36;1melse[0m
+2026-10-04T10:38:59.5248704Z [36;1m  echo "✗ No match — skipping (hour=$hour_match day=$day_match catchup=$catchup_match)"[0m
+2026-10-04T10:38:59.5249582Z [36;1m  echo "should-run=false" >> "$GITHUB_OUTPUT"[0m
+2026-10-04T10:38:59.5250178Z [36;1mfi[0m
+2026-10-04T10:38:59.6051597Z shell: /usr/bin/bash -e {0}
+2026-10-04T10:38:59.6052539Z env:
+2026-10-04T10:38:59.6053024Z   REPORT_TZ: 
+2026-10-04T10:38:59.6053510Z   REPORT_HOUR: 
+2026-10-04T10:38:59.6053997Z   REPORT_DAYS: 
+2026-10-04T10:38:59.6054506Z   EVENT_NAME: workflow_dispatch
+2026-10-04T10:38:59.6059300Z   GH_TOKEN: ***
+2026-10-04T10:38:59.6059759Z ##[endgroup]
+2026-10-04T10:38:59.6382138Z Manual trigger — bypassing time gate

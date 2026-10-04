@@ -1,0 +1,17 @@
+﻿2026-10-04T10:39:12.0021920Z ##[group]Run mkdir -p daily_reports
+2026-10-04T10:39:12.0022368Z [36;1mmkdir -p daily_reports[0m
+2026-10-04T10:39:12.0022969Z [36;1mif git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then[0m
+2026-10-04T10:39:12.0023765Z [36;1m  git fetch origin gh-pages --depth=1[0m
+2026-10-04T10:39:12.0024448Z [36;1m  git --work-tree=daily_reports checkout origin/gh-pages -- . || true[0m
+2026-10-04T10:39:12.0025176Z [36;1m  # Drop the index/archive — build-site regenerates them[0m
+2026-10-04T10:39:12.0025871Z [36;1m  rm -f daily_reports/index.html daily_reports/archive.html[0m
+2026-10-04T10:39:12.0026847Z [36;1m  echo "Restored $(ls -1d daily_reports/20*/ 2>/dev/null | wc -l) prior report dirs"[0m
+2026-10-04T10:39:12.0027548Z [36;1melse[0m
+2026-10-04T10:39:12.0028005Z [36;1m  echo "gh-pages doesn't exist yet — first run"[0m
+2026-10-04T10:39:12.0028697Z [36;1mfi[0m
+2026-10-04T10:39:12.0097327Z shell: /usr/bin/bash -e {0}
+2026-10-04T10:39:12.0097623Z ##[endgroup]
+2026-10-04T10:39:15.7578224Z From https://github.com/yibanna1111111/DailyBrief
+2026-10-04T10:39:15.7579043Z  * branch            gh-pages   -> FETCH_HEAD
+2026-10-04T10:39:15.7579655Z  * [new branch]      gh-pages   -> origin/gh-pages
+2026-10-04T10:39:15.9556560Z Restored 127 prior report dirs

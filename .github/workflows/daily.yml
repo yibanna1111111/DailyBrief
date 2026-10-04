@@ -62,8 +62,8 @@ jobs:
       - name: Check schedule
         id: check
         env:
-          REPORT_TZ: ${{ vars.REPORT_TZ }}
-          REPORT_HOUR: ${{ vars.REPORT_HOUR }}
+          REPORT_TZ: Asia/Shanghai
+          REPORT_HOUR: "8"
           REPORT_DAYS: ${{ vars.REPORT_DAYS }}
           EVENT_NAME: ${{ github.event_name }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -212,8 +212,8 @@ jobs:
 
       - name: Generate today's report
         env:
-          LLM_BACKEND: ${{ vars.LLM_BACKEND || 'deepseek' }}
-          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_BACKEND: openai
+          LLM_MODEL: halogen-qwen3.8-flash-next
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -223,7 +223,7 @@ jobs:
           # forker set in Settings → Variables. Empty values are a no-op
           # (backends fall back to the official URL in code).
           ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
-          OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL }}
+          OPENAI_BASE_URL: https://flash.yibanna.dpdns.org/v1
           DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
           MINIMAX_BASE_URL: ${{ vars.MINIMAX_BASE_URL }}
           ZHIPU_BASE_URL: ${{ vars.ZHIPU_BASE_URL }}
@@ -233,8 +233,8 @@ jobs:
           # vars above take precedence when both are set.
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
-          REPORT_LOCALE: ${{ vars.REPORT_LOCALE || 'zh' }}
-          REPORT_TZ: ${{ vars.REPORT_TZ }}
+          REPORT_LOCALE: zh
+          REPORT_TZ: Asia/Shanghai
           # Sources to skip in CI (comma-separated ids). linux.do's WAF blocks
           # datacenter egress from Actions runners (and Cloudflare Workers too —
           # no free proxy gets through), so fetching it here always fails. It
