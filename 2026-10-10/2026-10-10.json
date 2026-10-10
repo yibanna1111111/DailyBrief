@@ -1,149 +1,149 @@
 {
-  "hero_headline": "特朗普宣布从俄进口柴油，油价与地缘格局同时震动",
-  "daily_overview": "科技端，OpenAI企业落地提速：Sophos借Daybreak将威胁调查时间压缩96%，Asana用GPT-6.1 Sol将浏览器代理成本降76倍；DeepMind开源多模态嵌入模型EmbeddingGemma 2。财经端，特朗普宣布从俄进口柴油以压低油价，美国电信股因SpaceX频谱收购蒸发600亿美元，OpenAI收入口径争议搅动华尔街。时政端，泽连斯基痛斥柴油协议为「对普京的礼物」，南非人权律师皮莱获诺贝尔和平奖，巴拿马7.7级地震引发持续余震。",
+  "hero_headline": "特朗普宣布从俄采购柴油，乌克兰强烈反弹",
+  "daily_overview": "科技领域，OpenAI企业级应用密集落地，Sophos借助Daybreak将威胁调查时间压缩96%，Asana以GPT-6.1 Sol实现模型成本降低76倍；DeepMind发布开源多模态嵌入模型EmbeddingGemma 2。财经方面，特朗普宣布与普京达成柴油采购协议，美国电信股因SpaceX频谱收购蒸发600亿美元，OpenAI营收数据争议引发市场波动。时政层面，泽连斯基痛斥俄油协议为「战争投资」，巴拿马发生7.7级地震，南非律师皮莱获诺贝尔和平奖。",
   "tech_briefs": [
     {
-      "title": "Sophos借助OpenAI Daybreak将威胁调查时间压缩96%",
+      "title": "Sophos用OpenAI Daybreak将威胁调查时间压缩96%",
       "url": "https://openai.com/index/sophos",
       "source": "OpenAI News",
-      "summary": "安全厂商Sophos部署OpenAI Daybreak平台后，网络威胁调查耗时缩短96%，52%的MDR案件实现自动化处理，同时保留人工审核环节，标志着AI在安全运营中的规模化落地。",
+      "summary": "安全厂商Sophos部署OpenAI Daybreak平台后，网络威胁调查耗时减少96%，52%的MDR案件实现自动化处理，同时保留人工审核环节。",
       "importance": 8
+    },
+    {
+      "title": "DeepMind发布开源多模态嵌入模型EmbeddingGemma 2",
+      "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+      "source": "DeepMind Blog",
+      "summary": "EmbeddingGemma 2为轻量级开源多模态嵌入模型，支持文本、图像等混合输入，面向检索增强与语义匹配场景，降低多模态AI部署门槛。",
+      "importance": 7
+    },
+    {
+      "title": "MiMo-V2.6探索强化学习驱动模型自我进化",
+      "url": "https://huggingface.co/papers/2610.11959",
+      "source": "HuggingFace Trending Papers",
+      "summary": "小米MiMo-V2.6系列提出全模态强化学习框架，探索让基础模型通过RL实现自我改进，被视为通向自主进化模型的重要实验。",
+      "importance": 7
+    },
+    {
+      "title": "MIT科技评论：过度信任AI「说不」的能力很危险",
+      "url": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/",
+      "source": "MIT Tech Review AI",
+      "summary": "文章指出当前AI系统缺乏真正的拒绝能力，科幻叙事中机器自主说「不」的想象掩盖了实际部署中安全护栏的脆弱性。",
+      "importance": 7
     },
     {
       "title": "Asana用GPT-6.1 Sol将浏览器代理成本降低76倍",
       "url": "https://openai.com/index/asana-browser-agent",
       "source": "OpenAI News",
-      "summary": "Asana在Codex中采用GPT-6 Astra模型后，其浏览器代理测试成本下降76倍、速度提升5倍，表明大模型推理成本正快速下降，企业级AI应用的经济性门槛进一步降低。",
+      "summary": "Asana在Codex中采用GPT-6 Astra模型后，浏览器自动化代理测试成本下降76倍、速度提升5倍，展示大模型在SaaS工作流中的经济性突破。",
       "importance": 7
-    },
-    {
-      "title": "DeepMind开源轻量多模态嵌入模型EmbeddingGemma 2",
-      "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
-      "source": "DeepMind Blog",
-      "summary": "EmbeddingGemma 2是DeepMind发布的开源多模态嵌入模型，支持文本、图像等混合输入，体积轻量，适合在资源受限设备上部署检索与语义匹配任务，降低多模态AI应用开发门槛。",
-      "importance": 7
-    },
-    {
-      "title": "MIT科技评论：我们高估了AI说「不」的能力",
-      "url": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/",
-      "source": "MIT Tech Review AI",
-      "summary": "文章指出，科幻叙事长期假设AI能像人类一样拒绝指令，但当前大模型在安全对齐中「说不」的能力远未可靠，过度依赖模型自我约束存在系统性风险，需外部机制兜底。",
-      "importance": 7
-    },
-    {
-      "title": "MiMo-V2.6探索全模态强化学习自我改进路径",
-      "url": "https://huggingface.co/papers/2610.11959",
-      "source": "HuggingFace Trending Papers",
-      "summary": "小米MiMo团队发布V2.6系列全模态模型，核心思路是通过强化学习推动模型自我改进，覆盖文本、图像、音频等多模态任务，试图验证RL作为基础模型能力跃迁主路径的可行性。",
-      "importance": 6
     }
   ],
   "finance_briefs": [
     {
-      "title": "特朗普宣布与普京达成柴油进口协议以压低油价",
+      "title": "特朗普宣布与普京达成柴油采购协议",
       "url": "https://www.ft.com/content/84ca76fd-0eed-4fb6-aea4-f72638a9d9c8?syn-25a6b1a6=1",
       "source": "Financial Times",
-      "summary": "特朗普宣布美国将从俄罗斯进口柴油，旨在中期选举前压低国内燃料价格。该协议放松了多年来对莫斯科的能源施压，分析认为此举凸显白宫面临的生活成本政治压力。（多家报道）",
+      "summary": "华盛顿与莫斯科在中期选举前数周达成柴油供应协议，旨在压低美国燃油价格。分析认为此举凸显执政党面临的生活成本压力。（多家报道）",
       "importance": 9
     },
     {
-      "title": "SpaceX宣布频谱收购，美国电信股蒸发600亿美元",
-      "url": "https://www.ft.com/content/8c3f95ec-2428-4102-9f67-b707f1264c69?syn-25a6b1a6=1",
-      "source": "Financial Times",
-      "summary": "SpaceX宣布收购无线频谱资源，向Starlink面向美国消费者的移动服务迈出关键一步，消息导致美国主要电信运营商股价大跌，总市值蒸发约600亿美元。",
-      "importance": 8
-    },
-    {
-      "title": "OpenAI收入口径争议引发华尔街波动",
+      "title": "OpenAI年化营收比此前报道少200亿美元",
       "url": "https://www.ft.com/content/62653892-2333-4953-a8d5-cfd760ae3257?syn-25a6b1a6=1",
       "source": "Financial Times",
-      "summary": "OpenAI年化收入被曝比此前报道低约200亿美元，模糊的财务披露方式引发美股AI板块震荡。FT评论指出，不透明的增长指标可能为未来IPO估值埋下隐患。（多家报道）",
+      "summary": "OpenAI实际年化收入比此前披露数据低约200亿美元，模糊的营收口径为未来IPO估值埋下隐患，消息公布后美股AI板块出现波动。（多家报道）",
+      "importance": 9
+    },
+    {
+      "title": "SpaceX收购频谱，美国电信股蒸发600亿美元",
+      "url": "https://www.ft.com/content/8c3f95ec-2428-4102-9f67-b707f1264c69?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "summary": "马斯克旗下SpaceX宣布收购无线频谱资源，向Starlink美国消费者移动服务迈出关键一步，传统电信运营商股价应声大跌。",
       "importance": 8
     },
     {
-      "title": "达美航空大幅下调利润预期，燃油成本压力持续",
+      "title": "达美航空大幅下调利润预期，燃油成本承压",
       "url": "https://www.ft.com/content/77d73223-3cfc-4892-a3c5-5502595f42d4?syn-25a6b1a6=1",
       "source": "Financial Times",
-      "summary": "达美航空警告伊朗冲突推高燃油成本将持续侵蚀利润，尽管三季度营收增长，仍大幅下调全年盈利指引，反映地缘风险对航空业的持续冲击。",
+      "summary": "达美航空警告伊朗冲突推高燃油价格将持续侵蚀利润，尽管三季度营收增长，仍大幅削减全年盈利指引。",
       "importance": 7
     },
     {
-      "title": "英国连锁药妆Boots易主加拿大亿万富翁家族",
-      "url": "https://www.bbc.co.uk/news/articles/c63djxry8124o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Business",
-      "summary": "英国高街标志性连锁药妆店Boots被出售给加拿大亿万富翁家族，市场关注新东家对门店网络、员工及消费者服务的影响。",
+      "title": "经济学人：各国政府应对可负担性危机方式失当",
+      "url": "https://www.economist.com/finance-and-economics/2026/10/08/governments-are-mishandling-the-affordability-crisis",
+      "source": "The Economist Finance",
+      "summary": "文章批评各国政府试图通过压制价格而非提升收入来应对生活成本危机，认为这一路径不可持续且扭曲市场信号。",
       "importance": 6
     }
   ],
   "politics_briefs": [
     {
-      "title": "泽连斯基痛斥美俄柴油协议为「对普京的礼物」",
+      "title": "泽连斯基痛斥美俄柴油协议为「战争投资」",
       "url": "https://www.theguardian.com/us-news/2026/oct/09/trump-putin-russian-diesel-ukraine",
       "source": "The Guardian",
-      "summary": "乌克兰总统泽连斯基公开批评特朗普与普京的柴油交易，称允许俄出售石油产品将延长战争。该协议使美国与北约盟友在能源制裁立场上出现裂痕，地缘博弈加剧。（多家报道）",
+      "summary": "乌克兰总统强烈批评特朗普与普京的柴油交易，称其为「必须终结而非延续的战争投资」，此举料将加剧与北约盟友的裂痕。（多家报道）",
       "importance": 9
     },
     {
-      "title": "南非人权律师纳维·皮莱获2026年诺贝尔和平奖",
-      "url": "https://www.npr.org/2026/10/09/nx-s1-5996461/south-african-human-rights-lawyer-navi-pillay-wins-nobel-peace-prize",
-      "source": "NPR World",
-      "summary": "南非人权律师、前联合国人权高专纳维·皮莱因毕生捍卫人权与国际法获颁2026年诺贝尔和平奖，评委会肯定其在种族隔离后南非及国际司法中的长期贡献。",
+      "title": "巴拿马发生7.7级地震，首都恐慌建筑倒塌",
+      "url": "https://www.theguardian.com/world/2026/oct/09/panama-earthquake",
+      "source": "The Guardian",
+      "summary": "巴拿马南部发生7.7级地震并引发多次余震，部分建筑与道路坍塌，首都出现恐慌，但暂未报告大规模人员伤亡。（多家报道）",
       "importance": 8
     },
     {
-      "title": "巴拿马发生7.7级地震，南部地区持续余震",
-      "url": "https://www.nytimes.com/2026/10/09/world/americas/panama-earthquake-tsunami.html",
-      "source": "NYT World",
-      "summary": "巴拿马南部发生初步震级7.7的强震，随后引发一系列余震，当局已发布海啸预警，周边国家进入警戒状态，伤亡及基础设施损失仍在评估中。",
+      "title": "南非人权律师皮莱获2026年诺贝尔和平奖",
+      "url": "https://www.npr.org/2026/10/09/nx-s1-5996461/south-african-human-rights-lawyer-navi-pillay-wins-nobel-peace-prize",
+      "source": "NPR World",
+      "summary": "南非人权律师纳维·皮莱因毕生捍卫人权与国际法获颁诺贝尔和平奖，她曾担任联合国人权高专及国际刑事法院法官。",
       "importance": 7
     }
   ],
-  "editor_note": "柴油协议将能源、选举与地缘三线拧成一股绳；AI企业落地叙事与收入透明度之间的张力，同样值得持续追踪。",
+  "editor_note": "能源地缘博弈与AI商业叙事在同一天交织：柴油协议重塑市场，而OpenAI营收「缩水」提醒投资者警惕估值泡沫。",
   "keywords": [
-    "美俄柴油协议",
-    "OpenAI企业落地",
+    "俄油柴油",
+    "OpenAI营收",
     "SpaceX频谱",
-    "诺贝尔和平奖",
     "巴拿马地震",
-    "中期选举",
-    "多模态模型",
-    "燃油价格"
+    "诺贝尔和平奖",
+    "AI安全",
+    "中欧磋商",
+    "中期选举"
   ],
   "trading": {
-    "market_overview": "美股方面，SPY 与 QQQ 均呈多头排列且接近 52 周高点，SPY 触发 MACD 金叉（MACD 2.84 上穿信号 1.82），RSI 56.1 中性偏强；但 NVDA 单日跌 3.45%、META 出现 MACD 死叉，科技板块内部动量分化。加密市场总市值 2.80T USD（24h -1.85%），BTC 主导率 59.2%，恐慌贪婪指数 64（贪婪），BTC RSI 50.2 中性但 MACD 1134 低于信号 1701 呈绿柱收敛；ETH RSI 39.3 偏弱，SOL 五日跌 10.13%，短期承压。中概股整体空头排列，BABA RSI 39.1 且 MACD 死叉，PDD 虽触发 MACD 金叉但仍处空头结构。商品外汇方面，黄金 RSI 43.9 空头排列，美元指数 RSI 69.2 接近超买且逼近 52 周高，USDCNY RSI 22.5 进入超卖，VIX 14.84 低位运行，整体风险偏好中性偏乐观。",
+    "market_overview": "美股方面，SPY 与 QQQ 均处于多头排列，SPY 触发 MACD 金叉且距 52 周高点仅 -0.39%，RSI 56.1 中性偏强；但 NVDA 单日 -3.45%、META 出现 MACD 死叉，科技板块内部动量分化明显。加密板块总市值 2.80T USD（24h -1.86%），BTC 主导率 59.1%、ETH 10.8%，恐慌贪婪指数 64 处于「贪婪」区间；BTC RSI 49.9 中性，ETH RSI 39.1 偏弱，SOL 5 日 -10.08%，短期回调压力显著。中概股整体仍处空头排列，BABA RSI 39.1、MACD 死叉，但单日 +4.08% 出现超跌反弹迹象；腾讯 RSI 45.8 亦偏弱，JD 触发 SMA50 下穿 SMA200 死叉。商品外汇方面，黄金 RSI 43.9 处于空头排列，WTI 原油维持多头排列但 MACD 转负；美元指数 RSI 69.2 逼近超买、距 52 周高仅 -0.3%，USDCNY RSI 22.5 进入超卖区间，人民币短期承压但存在均值回归可能。",
     "watchlist": [
       {
         "symbol": "SPY",
         "display_name": "标普500 ETF (SPY)",
         "stance": "偏上行",
-        "rationale": "SPY 报 778.57，价格站上 SMA20（767.26）、SMA50（766.84）、SMA200（722.46）形成完整多头排列，距 52 周高点仅 -0.39%。MACD 2.84 上穿信号线 1.82 触发金叉，RSI 56.1 处于中性偏强区间，五日涨幅 1.91%，技术结构完整偏上行。"
-      },
-      {
-        "symbol": "BABA",
-        "display_name": "阿里巴巴 (BABA)",
-        "stance": "偏下行",
-        "rationale": "BABA 报 111.37，价格低于 SMA20（109.51）、SMA50（116.38）、SMA200（130.13）呈空头排列，距 52 周高点 -38.98%。MACD -2.11 下穿信号 -2.10 形成死叉，RSI 39.1 偏弱，虽单日反弹 4.08% 但中期均线压制明显，技术面偏下行。"
+        "rationale": "SPY 当前价 778.57 高于 SMA20（767.26）、SMA50（766.84）、SMA200（722.46），呈完整多头排列；MACD 2.84 上穿信号线 1.82 形成金叉，距 52 周高点仅 -0.39%，RSI 56.1 处于中性偏强区间，5 日涨幅 +1.91%，短期动量向上。"
       },
       {
         "symbol": "USDCNY=X",
         "display_name": "美元兑人民币 (USDCNY)",
         "stance": "偏下行",
-        "rationale": "美元兑人民币报 6.68，RSI 14 仅 22.5 进入超卖区间，MACD -0.0062 下穿信号 -0.0059 形成死叉，价格低于 SMA20（6.70）、SMA50（6.72）、SMA200（6.82）空头排列，距 52 周低点仅 0.03%，趋势偏下行但超卖信号显著。"
+        "rationale": "美元兑人民币 RSI 14 降至 22.5 进入超卖区间；MACD -0.0062 位于信号线 -0.0059 下方形成死叉，价格 6.68 低于 SMA20（6.70）、SMA50（6.72）、SMA200（6.82），呈空头排列，距 52 周低点仅 +0.03%，下行趋势明确但超卖提示短期或有技术性反弹。"
       },
       {
         "symbol": "TSLA",
         "display_name": "特斯拉 (TSLA)",
         "stance": "中性",
-        "rationale": "TSLA 报 382.70，MACD 4.43 上穿信号 3.73 形成金叉，RSI 55.8 中性，五日涨 8.07%。但价格仍低于 SMA200（391.13），趋势标记为 neutral，短期反弹动能与中期均线压制并存，技术状态中性震荡。"
+        "rationale": "Tesla 当前价 382.70 仍低于 SMA200（391.13），趋势标签为 neutral；但 MACD 4.43 上穿信号线 3.73 形成金叉，5 日涨幅 +8.07%，RSI 55.8 中性，价格站上 SMA20（367.80）与 SMA50（353.27），短期反弹动能存在但中期均线压制未解除，方向待确认。"
       },
       {
-        "symbol": "ETH-USD",
-        "display_name": "以太坊 (ETH-USD)",
-        "stance": "中性",
-        "rationale": "ETH 报 2488.46，RSI 39.3 偏弱但未入超卖，MACD 13.3 远低于信号 49.1 呈绿柱，五日跌 8.73%。价格低于 SMA20（2669.78）但高于 SMA200（2130.31），无明确金叉或死叉信号，技术面处于中性震荡区间。"
+        "symbol": "BABA",
+        "display_name": "阿里巴巴 (BABA)",
+        "stance": "偏下行",
+        "rationale": "阿里巴巴 RSI 39.1 偏弱，MACD -2.11 位于信号线 -2.10 下方形成死叉，价格 111.37 低于 SMA50（116.38）与 SMA200（130.13），呈空头排列；尽管单日 +4.08% 出现超跌反弹，但距 52 周高点仍 -38.98%，中期下行结构未改变。"
+      },
+      {
+        "symbol": "DX-Y.NYB",
+        "display_name": "美元指数 (DXY)",
+        "stance": "偏上行",
+        "rationale": "美元指数 102.23 高于 SMA20（101.15）、SMA50（100.11）、SMA200（99.37），多头排列完整；RSI 69.2 逼近超买阈值，距 52 周高点仅 -0.3%，MACD 0.65 在信号线 0.56 上方运行，短期上行动能强劲但超买风险逐步累积。"
       }
     ],
-    "risk_caveat": "以上分析仅基于历史价格与技术指标的客观读数，过去走势不代表未来表现，不构成任何投资建议或买卖推荐，仅供技术指标解读参考。",
+    "risk_caveat": "本报告中所有技术指标读数均基于历史行情数据计算，过去走势不代表未来表现。技术指标存在滞后性与局限性，仅供技术指标解读参考，不构成任何投资建议或买卖依据。",
     "tickers": [
       {
         "symbol": "SPY",
@@ -400,18 +400,18 @@
         "group": "crypto",
         "currency": "USD",
         "exchangeName": "CCC",
-        "currentPrice": 82546.72,
-        "pct1Day": 1.0656502308894371,
-        "pct5Day": -4.548532410603967,
-        "pct52WeekHigh": -32.62023802465085,
-        "pct52WeekLow": 42.94357291674278,
-        "sma20": 84284.778125,
-        "sma50": 80718.55015625,
-        "sma200": 71856.2969140625,
-        "rsi14": 50.16417341306688,
-        "macd": 1134.2089720309305,
-        "macdSignal": 1701.299736787495,
-        "macdHistogram": -567.0907647565646,
+        "currentPrice": 82472.82,
+        "pct1Day": 0.9751711476252913,
+        "pct5Day": -4.63398539353116,
+        "pct52WeekHigh": -32.680559796490826,
+        "pct52WeekLow": 42.81560259837585,
+        "sma20": 84281.083203125,
+        "sma50": 80717.0721875,
+        "sma200": 71855.927421875,
+        "rsi14": 49.89987809898247,
+        "macd": 1128.3139399796491,
+        "macdSignal": 1700.1207303772387,
+        "macdHistogram": -571.8067903975896,
         "trend": "bullish",
         "rsiState": "normal",
         "signals": [
@@ -427,18 +427,18 @@
         "group": "crypto",
         "currency": "USD",
         "exchangeName": "CCC",
-        "currentPrice": 2488.46,
-        "pct1Day": 0.6694169672277045,
-        "pct5Day": -8.730909390146529,
-        "pct52WeekHigh": -43.38710488352935,
-        "pct52WeekLow": 65.18088875849149,
-        "sma20": 2669.783898925781,
-        "sma50": 2554.240751953125,
-        "sma200": 2130.3086596679686,
-        "rsi14": 39.27403263361167,
-        "macd": 13.301858290237305,
-        "macdSignal": 49.127612995050505,
-        "macdHistogram": -35.8257547048132,
+        "currentPrice": 2486.8,
+        "pct1Day": 0.6022624892913168,
+        "pct5Day": -8.79179310554173,
+        "pct52WeekHigh": -43.424870170451115,
+        "pct52WeekLow": 65.07070001712573,
+        "sma20": 2669.7009033203126,
+        "sma50": 2554.2075537109376,
+        "sma200": 2130.300360107422,
+        "rsi14": 39.091955136326504,
+        "macd": 13.169443649033383,
+        "macdSignal": 49.101130066809716,
+        "macdHistogram": -35.93168641777633,
         "trend": "neutral",
         "rsiState": "normal",
         "signals": []
@@ -449,18 +449,18 @@
         "group": "crypto",
         "currency": "USD",
         "exchangeName": "CCC",
-        "currentPrice": 109.22,
-        "pct1Day": -0.20307797625832158,
-        "pct5Day": -10.128147185170993,
-        "pct52WeekHigh": -51.29629794786269,
-        "pct52WeekLow": 80.78291814946618,
-        "sma20": 117.81829071044922,
-        "sma50": 108.21326049804688,
-        "sma200": 86.61211204528809,
-        "rsi14": 42.806850067280365,
-        "macd": 2.208245786206234,
-        "macdSignal": 4.072595818295788,
-        "macdHistogram": -1.864350032089554,
+        "currentPrice": 109.28,
+        "pct1Day": -0.14825454354064413,
+        "pct5Day": -10.078776088587126,
+        "pct52WeekHigh": -51.269542572261805,
+        "pct52WeekLow": 80.88223123396507,
+        "sma20": 117.8212905883789,
+        "sma50": 108.21446044921875,
+        "sma200": 86.61241203308106,
+        "rsi14": 42.88910906514692,
+        "macd": 2.2130319162365026,
+        "macdSignal": 4.073553044301842,
+        "macdHistogram": -1.860521128065339,
         "trend": "bullish",
         "rsiState": "normal",
         "signals": [
@@ -799,13 +799,13 @@
       "timestamp": "2026-10-10T00:00:00.000Z"
     },
     "crypto_global": {
-      "totalMarketCapUsd": 2800053604983.175,
-      "total24hVolumeUsd": 75825717718.44017,
-      "marketCapChangePct24h": -1.8520840878741136,
-      "btcDominance": 59.165761262299995,
-      "ethDominance": 10.827964097972064,
+      "totalMarketCapUsd": 2798453527472.1963,
+      "total24hVolumeUsd": 75413693599.00378,
+      "marketCapChangePct24h": -1.8613641257871312,
+      "btcDominance": 59.13483749557259,
+      "ethDominance": 10.83417747258612,
       "activeCryptocurrencies": 22120
     },
-    "generated_at": "2026-10-10T00:22:29.616Z"
+    "generated_at": "2026-10-10T00:46:46.109Z"
   }
 }
